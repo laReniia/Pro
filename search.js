@@ -12,7 +12,7 @@ app.use(cors());
 // Serve static files (your frontend HTML, CSS, JS files)
 app.use(express.static(path.join(__dirname, 'public')));
 
-/ Fallback to index.html for any unmatched route
+// Fallback to index.html for any unmatched route
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
